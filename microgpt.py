@@ -3,7 +3,7 @@ The most atomic way to train and run inference for a GPT in pure, dependency-fre
 This file is the complete algorithm.
 Everything else is just efficiency.
 
-@karpathy
+@dhiraj7kr
 """
 
 import os       # os.path.exists
@@ -14,7 +14,8 @@ random.seed(42) # Let there be order among chaos
 # Let there be a Dataset `docs`: list[str] of documents (e.g. a list of names)
 if not os.path.exists('input.txt'):
     import urllib.request
-    names_url = 'https://raw.githubusercontent.com/karpathy/makemore/988aa59/names.txt'
+    #names_url = 'https://raw.githubusercontent.com/karpathy/makemore/988aa59/names.txt'
+    names_url = 'https://raw.githubusercontent.com/dhiraj7kr/Microgpt/refs/heads/main/names.txt'
     urllib.request.urlretrieve(names_url, 'input.txt')
 docs = [line.strip() for line in open('input.txt') if line.strip()]
 random.shuffle(docs)
